@@ -109,7 +109,7 @@ void Print5Last(Adega *adega, Adega *adegaOrdenada) {
 
   current = adegaOrdenada->primeiro;
   while (current != NULL) {
-    addVinho(current->vinho, &newAdega);
+    AddVine(current->vinho, &newAdega);
     Order(&newAdega);
     current = current->next;
   }
@@ -130,15 +130,15 @@ void Print5Lasts(Adega *adega, Adega *adegaOrdenada) {
   newAdega.qty = 0;
   Node *current = adega->primeiro;
   while (current != NULL) {
-    addVinho(current->vinho, &newAdega);
+    AddVine(current->vinho, &newAdega);
     Order(&newAdega);
     current = current->next;
   }
 
   current = adegaOrdenada->primeiro;
   while (current != NULL) {
-    addVinho(current->vinho, &newAdega);
-    ordenar(&newAdega);
+    AddVine(current->vinho, &newAdega);
+    Order(&newAdega);
     current = current->next;
   }
   current = newAdega.primeiro;

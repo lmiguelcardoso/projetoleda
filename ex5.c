@@ -177,6 +177,5 @@ int main(void){
         printf("opção invalida!");
     }
   }
-  
 }
 
